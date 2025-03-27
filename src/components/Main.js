@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
-import SocialIcons from '../subComponents/SocialIcons'
 import { YinYang } from './AllSvgs'
 import Intro from './Intro'
 ;
@@ -138,14 +137,14 @@ const Main = () => {
             <Container>
             <PowerButton />
             <LogoComponent theme={click ? 'dark' :'light'}/>
-            <SocialIcons theme={click ? 'dark' :'light'} />
+            {/* <SocialIcons theme={click ? 'dark' :'light'} /> */}
            
             <Center click={click}>
                 <YinYang  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                <span>click here</span>
+                <span><i> Click Here</i></span>
             </Center>
 
-            <Contact target="_blank" href="mailto:codebucks27@gmail.com">
+            <Contact target="_blank" href="mailto:Indersandhu955@gmail.com">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -162,7 +161,7 @@ const Main = () => {
                     Say hi..
                 </motion.h2>
             </Contact>
-            <BLOG to="/blog">
+            {/* <BLOG to="/blog">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -177,7 +176,7 @@ const Main = () => {
                 >
                     Blog
                 </motion.h2>
-            </BLOG>
+            </BLOG> */}
             <WORK to="/work" click={+click}>
                 <motion.h2
                 initial={{

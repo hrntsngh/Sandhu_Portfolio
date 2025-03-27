@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {motion} from 'framer-motion'
-import Me from '../assets/Images/profile-img.png'
+import Me from '../assets/Images/Portfolio.png'
 
 
 const Box = styled(motion.div)`
@@ -36,21 +36,24 @@ background-size: 100% 2px;
 `
 const SubBox = styled.div`
 width: 50%;
-position: relative;
+// position: relative;
 display: flex;
-
+text-align: center;
+align-items: center;
 .pic{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%,0%);
-    width: 100%;
-    height: auto;
+    // position: absolute;
+    // bottom: 0;
+    // left: 50%;
+    // transform: translate(-50%,0%);
+        width: 70%;
+    // height: auto;
+    
+
 }
 `
 
 const Text = styled.div`
-font-size: calc(1em + 1.5vw);
+font-size: calc(1em + 1vw);
 color: ${props => props.theme.body};
 padding: 2rem;
 cursor: pointer;

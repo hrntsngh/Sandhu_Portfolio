@@ -28,7 +28,7 @@ color: ${props => props.theme.text};
 background-color: ${props => props.theme.body};
 padding: 2rem;
 width: 30vw;
-height: 60vh;
+height: 65vh;
 z-index:3;
 line-height: 1.5;
 cursor: pointer;
@@ -37,6 +37,8 @@ font-family: 'Ubuntu Mono',monospace;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+overflow: hidden;
+
 
 &:hover{
     color: ${props => props.theme.body};
@@ -88,10 +90,10 @@ const MySkillsPage = () => {
 <Box>
 
 <LogoComponent theme='light'/>
-<SocialIcons theme='light'/>
+{/* <SocialIcons theme='light'/> */}
 <PowerButton />
 <ParticleComponent theme='light' />
-            <Main>
+            {/* <Main>
 <Title>
     <Design width={40} height={40} /> Designer
 </Title>
@@ -105,7 +107,7 @@ I love to create design which speaks, Keep it clean, minimal and simple.
         Web Design
     </li>
     <li>
-        Mobile Apps
+        IOS Apps
     </li>
 </ul>
 </Description>
@@ -119,10 +121,10 @@ I love to create design which speaks, Keep it clean, minimal and simple.
 </ul>
 </Description>
 
-            </Main>
+            </Main> */}
             <Main>
 <Title>
-    <Develope width={40} height={40} /> Frontend Developer
+    <Develope width={40} height={40} /> IOS Developer
 </Title>
 <Description>
 I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
@@ -130,13 +132,14 @@ I value business or brand for which i'm creating, thus i enjoy bringing new idea
 <Description>
 <strong>Skills</strong>
 <p>
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
+    Swift, RESTFUL API's, MVC & MVVM, Firebase, Local database, <b> FrameWorks:</b> Cocoa Touch,
+UIKit, Core Location, Cocoa Pods
 </p>
 </Description>
 <Description>
 <strong>Tools</strong>
 <p>
-VScode, Github, Codepen etc.
+Xcode, Github, Codepen etc.
 </p>
 </Description>
 
