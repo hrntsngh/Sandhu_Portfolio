@@ -3,8 +3,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Github } from '../components/AllSvgs';
-
-
+import image1 from '../assets/Images/appStore1.png';
+import image2 from '../assets/Images/appStore2.png';
 
 const Box = styled(motion.li)`
 width: 20rem;
@@ -80,7 +80,18 @@ ${Box}:hover &{
 }
 
 `
+const Image2 = styled.img`
+  width: 50px;
+  height: 50px;
+  transition: background-color 0.3s ease-in-out;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 10px;
 
+  &:hover {
+    background-color: white;
+  }
+`;
 // Framer motion configuration
 const Item = {
     hidden:{
@@ -109,12 +120,12 @@ const Card = (props) => {
                 <Link href={demo} target="_blank">
                     Visit
                 </Link>
+                <img className="img2" src={image2} alt={name} style={{width: '50px', height: '50px'}}/>
                 {/* <Git  href={github}  target="_blank">
-                    <Github width={30} height={30} />
+                    // <Github width={30} height={30} />
                 </Git> */}
             </Footer>
         </Box>
     )
 }
-
 export default Card

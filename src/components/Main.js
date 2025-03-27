@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
+import SocialIcons from '../subComponents/SocialIcons'
 import { YinYang } from './AllSvgs'
 import Intro from './Intro'
 ;
@@ -35,15 +36,21 @@ right: calc(1rem + 2vw);
 text-decoration: none;
 z-index:1;
 `
-const BLOG = styled(NavLink)`
-color: ${props => props.theme.text};
-position: absolute;
-top: 50%;
-right: calc(1rem + 2vw);
-transform: rotate(90deg) translate(-50%, -50%);
-text-decoration: none;
-z-index:1;
-`
+const Blog = styled.a`
+color:black;
+  position: absolute;
+  top: 50%;
+  right: calc(1rem + 2vw);
+  transform: rotate(90deg) translate(-50%, -50%);
+  text-decoration: none;
+  z-index: 1;
+  font-size: 1.2rem;
+  
+  &:hover {
+  color:black;
+  }
+`;
+
 const WORK = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 
@@ -137,14 +144,14 @@ const Main = () => {
             <Container>
             <PowerButton />
             <LogoComponent theme={click ? 'dark' :'light'}/>
-            {/* <SocialIcons theme={click ? 'dark' :'light'} /> */}
+            <SocialIcons theme={click ? 'dark' :'light'} />
            
             <Center click={click}>
                 <YinYang  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                <span><i> Click Here</i></span>
+                <span>Click Here</span>
             </Center>
 
-            <Contact target="_blank" href="mailto:Indersandhu955@gmail.com">
+            <Contact target="_blank" href="mailto:codebucks27@gmail.com">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -161,22 +168,23 @@ const Main = () => {
                     Say hi..
                 </motion.h2>
             </Contact>
-            {/* <BLOG to="/blog">
-                <motion.h2
-                initial={{
-                    y:-200,
-                    transition: { type:'spring', duration: 1.5, delay:1}
-                }}
-                animate={{
-                    y:0,
-                    transition: { type:'spring', duration: 1.5, delay:1}
-                }}
-                whileHover={{scale: 1.1}}
-                whileTap={{scale: 0.9}}
-                >
-                    Blog
-                </motion.h2>
-            </BLOG> */}
+            <Blog href="https://swiftdevelopersai.blogspot.com/" target="_blank" rel="noreferrer">
+    <motion.h2
+        initial={{
+            y: -200,
+            transition: { type: 'spring', duration: 1.5, delay: 1 }
+        }}
+        animate={{
+            y: 0,
+            transition: { type: 'spring', duration: 1.5, delay: 1 }
+        }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+    >
+        Blog
+    </motion.h2>
+</Blog>
+
             <WORK to="/work" click={+click}>
                 <motion.h2
                 initial={{

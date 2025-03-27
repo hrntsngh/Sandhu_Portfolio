@@ -5,7 +5,7 @@ export const Work = [
         id:1,
         name:"Union: Request a Ride",
         description:"The Union App, a ride-hailing application for bodas and private cars in Uganda prioritizes the convenience and safety of both the drivers/riders and passengers alike.",
-        demo:"prioritizes the convenience and safety of both the drivers/riders and passengers alike.",
+        demo:"https://apps.apple.com/in/app/union-request-a-ride/id6739698569",
         },
     {
         id:2,

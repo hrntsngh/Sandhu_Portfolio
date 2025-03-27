@@ -4,7 +4,6 @@ import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg"
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons  from '../subComponents/SocialIcons'
 import PowerButton  from '../subComponents/PowerButton'
-
 import {Blogs} from '../data/BlogData';
 import BlogComponent from './BlogComponent'
 import AnchorComponent from '../subComponents/Anchor'

@@ -16,7 +16,6 @@ const Box = styled.div`
 `;
 
 const ParticlesComponent = (props) => {
-// This is new implementation where I have used react-tsparticles instead of react-particles-js
   const particlesInit = async (main) => {
     await loadFull(main);
   };
